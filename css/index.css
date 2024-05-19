@@ -1,0 +1,116 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 150% auto;
+    grid-template-areas: "header" "nav" "main-text" "footer";
+    ;
+}
+@font-face {
+    font-family: "title-font";
+    src: local("title-font"), url(font/TDIzbushka.otf);
+}
+header{
+    font-family: title-font;
+    font-size: 120px;
+    text-align: center;
+    color: rgb(84, 84, 141);
+    /* color: rgb(236, 236, 253);
+    background-color: rgb(84, 84, 141); */
+    padding-bottom: 20px;
+    grid-area: "header";
+}
+@media screen and (width<1100px) {
+    header{
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "star1 title star2"
+    ;
+    align-items: center;
+    }
+}
+@media screen and (width<960px) {
+    .nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "main class"" collection info"
+        ;
+        
+    }   
+}
+@media screen and (min-width: 960px) {
+    .nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "main class collection info"
+        ;
+    }
+}
+
+body, html{
+    background-color: rgb(230, 230, 241);
+    height: 100%;
+}
+nav{
+    background-color: rgb(171, 171, 201);
+}
+.nav{
+    width: 90%;
+    grid-area: "nav";
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    font-size: 22px;
+}
+nav * div{
+    height: 70%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(141, 141, 196);
+    padding: 10px;
+    margin: 3% 5% 3% 5%;
+}
+a{
+    text-decoration: none;
+}
+.main{
+    grid-area: "main";
+}
+.info{
+    grid-area: "info";
+}
+.collection{
+    grid-area: "collection";
+}
+.class{
+    grid-area: "class";
+}
+#title{
+    grid-area: "title";
+}
+#star1{
+    grid-area: "star1";
+}
+#star2{
+    grid-area: "star2";
+}
+.main-text{
+    grid-area: "main-text";
+    background-color: rgb(205, 205, 221);
+    width: 90%;
+    margin: 2% auto 5% auto ;
+    height: 100%;
+}
+footer{
+    background-color: rgb(171, 171, 201);
+    height: 100px;
+    grid-area: "footer";
+    text-align: center;
+    margin: 3% auto auto auto;
+    width: 90%;
+}
+footer *{
+    margin: 1%;
+}
