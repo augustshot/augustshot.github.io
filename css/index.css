@@ -1,12 +1,23 @@
 :root{
-    --bg-main: rgb(230, 230, 241);
-    --bg-darker: rgb(171, 171, 201);
-    --title: rgb(84, 84, 141);
-    --bg-dark: rgb(141, 141, 196);
-    --txt: rgb(40, 40, 59);
-    --bg-txt: rgb(207, 207, 218);
+    --bg-main: rgb(223, 221, 231);
+    --bg-light:  rgb(242, 242, 250);
+    --bg-txt: rgb(204, 198, 216);
+    --bg-darker: rgb(184, 171, 201);
+    --bg-dark: rgb(165, 141, 196);
+    --title: #595496;
+    --txt: rgb(49, 40, 59);
+    --bg-image: url(/img/bg.png);
 }   
-
+[data-theme="dark"]{
+    --bg-main: rgb(57, 45, 78);
+    --bg-light:  rgb(135, 106, 161);
+    --bg-txt: rgb(83, 71, 107);
+    --bg-darker: rgb(108, 97, 133);
+    --bg-dark: rgb(93, 68, 128);
+    --title: rgb(235, 232, 245);
+    --txt: rgb(242, 242, 250);
+    --bg-image: url(/img/bgdark.jpg);
+}
 
 
 .container{
@@ -26,11 +37,12 @@
 }
 header{
     font-family: title-font;
-    font-size: 100px;
     text-align: center;
     color: var(--title);
     padding-bottom: 20px;
     grid-area: "header";
+    hyphens: none; 
+    word-break: keep-all;
 }
 @media screen and (width<1100px) {
     header{
@@ -40,25 +52,58 @@ header{
     "star1 title star2"
     ;
     align-items: center;
+    font-size: 50px;
+    }
+    .nav{
+        font-size: 20px;
+    }
+    #welcome{
+        font-size: 20px;
+    }
+} 
+@media screen and(width<=500){
+    .nav{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "main""class""collection""info"
+        ;  
     }
 }
-@media screen and (width<960px) {
+@media screen and (width>500px) and (width<1070px) {
     .nav{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         "main class"" collection info"
-        ;
-        
-    }   
+        ;   
+    }
+    header{
+        font-size: 100px;
+    }
+    .nav{
+        font-size: 30px;
+    }  
+    #welcome{
+        font-size: 25px;
+    }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1070px) {
     .nav{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr ;
         grid-template-areas: 
         "main class collection info"
         ;
+    }
+    header{
+        font-size: 100px;
+    }
+    .nav{
+        font-size: 24px;    
+    }
+    #welcome{
+        font-size: 35px;
     }
 }
 
@@ -67,13 +112,17 @@ body, html{
     height: 100%;
     font-family: regular;
     word-wrap:break-word;
-    hyphens: auto; 
+    hyphens: auto;
+    -webkit-hyphens: auto; 
     word-break: normal;
     overflow-wrap: break-word; 
     color: var(--txt);
 }
 nav{
-    background-color: var(--bg-darker);
+    background-image: var(--bg-image);
+    border-radius: 20px;
+    width: 95%;
+    margin: auto;
 }
 .nav{
     width: 90%;
@@ -81,21 +130,57 @@ nav{
     margin-left: auto;
     margin-right: auto;
     padding: 2%;
-    font-size: 25px;
+}
+.main, .class, .info, .collection{
+    border: 2px solid var(--bg-dark);
 }
 nav * div{
     height: 70%;
     text-align: center;
     border-radius: 10px;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-light);
     padding: 10px;
     margin: 3% 5% 3% 5%;
 }
 a{
     text-decoration: none;
+    color: var(--txt);
 }
+
+.main-text{
+    grid-area: "main-text";
+    background-color: var(--bg-txt);
+    margin: 2% auto 5% auto ;
+    height: 90%;
+    padding: 3% 5% 3% 5%;
+    border-radius: 20px;
+    width: 85%;
+    font-size: 24px;
+    text-indent: 30px;
+}
+#text{
+    /* width: 50%; */
+    text-align: justify;
+}
+footer{
+    background-color: var(--bg-darker);
+    height: 100px;
+    grid-area: "footer";
+    text-align: center;
+    margin: 3% auto auto auto;
+    width: 95%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+footer *{
+    margin: 1%;
+}
+
+
+
 .main{
-    grid-area: "main";
+    grid-area: "main"; 
 }
 .info{
     grid-area: "info";
@@ -115,30 +200,27 @@ a{
 #star2{
     grid-area: "star2";
 }
-.main-text{
-    grid-area: "main-text";
-    background-color: var(--bg-txt);
-    width: 90%;
-    margin: 2% auto 5% auto ;
-    height: 90%;
-    font-size: 24px;
-    padding:0 5% 3% 5%;
-}
-footer{
+#welcome{
+    text-align: center;
+    font-weight:bold;
+    /* font-family: title-font; */
+    padding-bottom: 2%;
+    padding-top: 2%;
+    border-radius: 15px;
     background-color: var(--bg-darker);
-    height: 100px;
-    grid-area: "footer";
-    text-align: center;
-    margin: 3% auto auto auto;
-    width: 90%;
 }
-footer *{
-    margin: 1%;
+#text{
+    text-align: justify;
+    margin-top: 5%;
 }
-#caption{
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    background-color: var(--bg-dark);
+#img-left{
+    float: left;
     margin: 2%;
+}
+
+.clickable{
+    cursor: pointer;
+}
+.centered{
+    text-align: center !important;
 }
