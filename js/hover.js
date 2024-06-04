@@ -19,23 +19,23 @@
 })();
 function changeImg() {
   if (this.id == "to-classification") {
-    document.getElementById("well").src = "/img/well-hover.jpg";
+    document.getElementById("well").src = "https://i.ibb.co/d6Y5nhr/well-hover.jpg";
   }
   if (this.id == "to-collection") {
-    document.getElementById("basket").src = "/img/basket-hover.jpg";
+    document.getElementById("basket").src = "https://i.ibb.co/GMVsmXH/basket-hover.jpg";
   }
   if (this.id == "to-info") {
-    document.getElementById("sin").src = "/img/sin-hover.jpg";
+    document.getElementById("sin").src = "https://i.ibb.co/L9p2wp3/sin-hover.jpg";
   }
 }
 function returnImg() {
   if (this.id == "to-classification") {
-    document.getElementById("well").src = "/img/well.jpg";
+    document.getElementById("well").src = "https://i.ibb.co/ckX2X11/well.jpg";
   }
   if (this.id == "to-collection") {
-    document.getElementById("basket").src = "/img/basket.jpg";
+    document.getElementById("basket").src = "https://i.ibb.co/WyLhkcg/basket.jpg";
   }
   if (this.id == "to-info") {
-    document.getElementById("sin").src = "/img/sin.jpg";
+    document.getElementById("sin").src = "https://i.ibb.co/42H1GZx/sin.jpg";
   }
 }
