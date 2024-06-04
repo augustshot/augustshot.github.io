@@ -113,8 +113,10 @@ header {
     opacity: 0;
     height: 0;
   }
-  footer{
+  footer{ 
+    /* почему на гитхабе тут ниче не поменялось????!?!? */
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-areas: 
     "theme"
     "contacts"
