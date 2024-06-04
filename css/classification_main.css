@@ -81,7 +81,7 @@ tr {
   border-radius: 20px;
   margin: auto;
   padding: 1%;
-  :hover{
+  :hover {
     background-color: var(--bg-txt);
   }
 }

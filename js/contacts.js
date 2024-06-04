@@ -18,13 +18,14 @@ function contactsClick() {
     shown = true;
     let vk = document.createElement("a");
     vk.href = "https://vk.com/augustshot";
-    vk.textContent = "ВКонтакте";
+    vk.textContent = "ВКонтакте: @augustshot";
     document.getElementById("vk").append(vk);
     let tg = document.createElement("a");
     tg.href = "https://t.me/augustshot";
-    tg.textContent = "Telegram";
+    tg.textContent = "Telegram: @augustshot";
     document.getElementById("telegram").append(tg);
-    document.getElementById("number").innerHTML = "ulyana.yamanova@yandex.ru";
-    document.getElementById("email").innerHTML = "+79501106490";
+    document.getElementById("email").innerHTML =
+      "E-mail: ulyana.yamanova@yandex.ru";
+    document.getElementById("number").innerHTML = "Телефон: +79501106490";
   }
 }

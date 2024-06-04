@@ -39,11 +39,11 @@
 }
 @font-face {
   font-family: "title-font";
-  src: local("title-font"), url(font/TDIzbushka.otf);
+  src: local("title-font"), url(font/izbushka.otf);
 }
 @font-face {
   font-family: "regular";
-  src: local("regular"), url(font/Shentox.ttf);
+  src: local("regular"), url(font/shentox.ttf);
 }
 header {
   font-family: title-font;
@@ -70,7 +70,11 @@ header {
   }
   #img-left img {
     width: 100%;
-    margin: 0 5% 5% 5%;
+    margin: auto;
+  }
+  #divider {
+    opacity: 0;
+    height: 0;
   }
 }
 @media screen and (width>500px) and (width<1070px) {
@@ -78,23 +82,25 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "main class" " collection info";
+    font-size: 30px;
   }
   header {
     font-size: 100px;
-  }
-  .nav {
-    font-size: 30px;
   }
   #welcome {
     font-size: 25px;
   }
   #img-left img {
     width: 40%;
-    margin: 0 5% 5% 5%;
+    margin: 0 5% 5% 2%;
   }
   #go-to {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  #divider {
+    opacity: 0;
+    height: 0;
   }
 }
 @media screen and (min-width: 1070px) {
@@ -102,34 +108,46 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "main class collection info";
+    font-size: 24px;
   }
   header {
     font-size: 100px;
-  }
-  .nav {
-    font-size: 24px;
   }
   #welcome {
     font-size: 35px;
   }
   #img-left img {
     width: 25%;
-    margin: 0 5% 5% 5%;
+    margin: 0 5% 5% 2%;
   }
   #go-to {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #divider {
+    opacity: 1;
+    height: 200px;
+    margin-bottom: 5%;
   }
 }
 @media screen and (min-width: 2000px) {
   #img-left img {
     width: 15%;
-    margin: 0 5% 5% 5%;
+    margin: 0 5% 5% 2%;
   }
   #go-to {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  #divider {
+    opacity: 1;
+    height: 200px;
+    margin-bottom: 5%;
+  }
+}
+
+.highlighted {
+  font-weight: bold;
 }
 
 body,
@@ -148,6 +166,15 @@ nav {
   border-radius: 20px;
   width: 95%;
   margin: auto;
+  * div {
+    height: 70%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--bg-light);
+    padding: 10px;
+    margin: 3% 5% 3% 5%;
+    color: rgb(49, 40, 59);
+  }
 }
 .nav {
   width: 90%;
@@ -161,15 +188,6 @@ nav {
 .info,
 .collection {
   border: 2px solid var(--bg-dark);
-}
-nav * div {
-  height: 70%;
-  text-align: center;
-  border-radius: 10px;
-  background-color: var(--bg-light);
-  padding: 10px;
-  margin: 3% 5% 3% 5%;
-  color: rgb(49, 40, 59);
 }
 a {
   text-decoration: none;
@@ -186,9 +204,6 @@ a {
   width: 85%;
   font-size: 24px;
   text-indent: 30px;
-}
-#text {
-  /* width: 50%; */
   text-align: justify;
 }
 footer {
@@ -202,9 +217,9 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-size: 20px;
-}
-footer * {
-  margin: 3% 0 3% 0;
+  * {
+    margin: 3% 0 3% 0;
+  }
 }
 
 .main {
@@ -236,11 +251,7 @@ footer * {
   padding-top: 2%;
   border-radius: 15px;
   background-color: var(--bg-darker);
-  margin-bottom: 3%;
-}
-#text {
-  text-align: justify;
-  /* margin-top: 5%; */
+  margin-bottom: 2%;
 }
 #img-left img {
   float: left;
@@ -251,7 +262,7 @@ footer * {
   cursor: pointer;
 }
 .centered {
-  text-align: center !important;
+  text-align: center;
 }
 #tale-src {
   text-align: right;
@@ -261,13 +272,13 @@ footer * {
   display: grid;
   margin-top: 10%;
   text-align: center;
-}
-#go-to * {
-  margin: auto;
-  text-align: center;
-  border-radius: 25px;
-  padding: 2%;
-  width: 80%;
+  * {
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    padding: 2%;
+    width: 80%;
+  }
 }
 #go-to a:hover {
   background-color: var(--bg-darker);
@@ -275,4 +286,22 @@ footer * {
 .outer {
   display: grid;
   grid-template-columns: 1fr;
+}
+.description {
+  margin: 0 auto 3% auto;
+  border: 3px solid var(--bg-dark);
+  border-radius: 15px;
+  padding: 2%;
+  background-color: var(--bg-light);
+  color: rgb(49, 40, 59);
+}
+#divider {
+  background-image: url("/img/divider.png");
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+}
+.back {
+  font-size: 20px;
+  margin-bottom: 2%;
 }

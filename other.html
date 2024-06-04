@@ -54,10 +54,99 @@
       </nav>
       <div class="main-text">
         <div class="caption">Справочная информация</div>
-        <div>Введите год</div>
-        <input type="number" min="0" max="2024" id="year"><span></span>
-        <button id="get">ОК</button>
-        <div id="mineral"></div>
+        <div id="links">
+          <div>
+            <h3>Узнать больше о...</h3>
+            <ul>
+              <li>
+                <a href="https://ru.wikipedia.org/wiki/Минерал">Минералах</a>
+              </li>
+              <li>
+                <a href="https://ru.wikipedia.org/wiki/Шкала_Мооса"
+                  >Шкале Мооса</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://ru.wikipedia.org/wiki/Окислы_и_гидроокислы_(минералы)"
+                  >Окислах и гидроокислах</a
+                >
+              </li>
+              <li>
+                <a href="https://ru.wikipedia.org/wiki/Список_минералов"
+                  >Разных минералах</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Полезные ресурсы</h3>
+            <ul>
+              <li>
+                <a href="https://www.mindat.org/"
+                  >Mindat.org &mdash; база данных о минералах и породах</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.machinemfg.com/ru/mohs-hardness-scale-chart/"
+                >
+                  Руководство и диаграмма по шкале твердости Мооса</a
+                >
+              </li>
+              <li>
+                <a href="https://mineral-irnitu.ru/ru/"
+                  >Государственный Минералогический Музей имени А.В. Сидорова</a
+                >
+              </li>
+              <li>
+                <a href="http://www.baikalgem.ru/"
+                  >Музей минералов Жигалова в г. Слюдянка</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="caption">Обратная связь</div>
+        <div id="feedback">
+          <form>
+            <div>
+              <input
+                type="text"
+                placeholder="Ваше имя"
+                required
+              />  
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                required
+              />
+            </div>
+            <br>
+            <p>
+              <textarea
+                placeholder="Оставьте отзыв..."
+                required
+                rows="10"
+              ></textarea>
+            </p>
+
+            <p>
+              <button id="send">Отправить</button>
+            </p>
+          </form>
+
+          <div id="thanks"></div>
+        </div>
+        <div id="api">
+          <div class="caption">Смотрите также</div>
+          <div><button id="show">Показать фокус</button></div>
+          <div id="output">
+            <img id="fox" src="https://a.d-cd.net/f14ae1es-960.jpg" alt="fox"/>
+          </div>
+        </div>
       </div>
       <footer>
         <div id="vk"></div>

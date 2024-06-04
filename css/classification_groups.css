@@ -7,13 +7,13 @@
   }
 }
 @media screen and (min-width: 960px) {
-    #group-container {
+  #group-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
   }
 }
-.groups{
+.groups {
   margin: 2% auto 2% auto;
   background-color: var(--bg-light);
   width: 70%;
@@ -26,10 +26,10 @@ div.outer {
   margin: auto;
   width: 70%;
   border-radius: 15px;
-  }
+}
 .minerals * {
-    padding: 2%;
-    border-radius: 15px;
+  padding: 2%;
+  border-radius: 15px;
   :hover {
     background-color: var(--bg-darker);
   }

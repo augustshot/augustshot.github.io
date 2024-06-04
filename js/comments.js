@@ -6,9 +6,8 @@ class Comment {
     this.addComment(name, text, date);
   }
   addComment(name, text, date) {
-    if (this.strip(text) == " " || text == "") {
+    if (!this.hasText()) {
       this.showWarning();
-      console.log("w");
     } else {
       let warning = document.getElementById("no-name");
       warning.classList.remove("warning");
@@ -33,8 +32,7 @@ class Comment {
     }
   }
   hasText() {
-    let text = document.getElementById("comm").value;
-    if (text == "") return false;
+    if (this.strip(this.text) == " " || this.text == "") return false;
     return true;
   }
   showWarning() {
@@ -75,6 +73,6 @@ function sendComment() {
     ":" +
     ("0" + d.getMinutes()).slice(-2);
   let comm = new Comment(name, text, date);
-  document.getElementById("comm").value = "";
   if (comm.hasText()) document.getElementById("name").value = "";
+  document.getElementById("comm").value = "";
 }
