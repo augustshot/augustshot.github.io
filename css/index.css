@@ -78,6 +78,7 @@ header {
   }
   footer{
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-areas: 
     "theme"
     "contacts"
