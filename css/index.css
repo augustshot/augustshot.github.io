@@ -230,6 +230,9 @@ nav {
 .collection {
   border: 2px solid var(--bg-dark);
 }
+.main, .class, .collection{
+  white-space: nowrap;
+}
 a {
   text-decoration: none;
   color: var(--txt);
