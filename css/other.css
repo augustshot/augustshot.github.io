@@ -20,7 +20,6 @@
     margin: auto;
     width: 90%;
   }
-
   textarea {
     width: 100%;
   }
@@ -49,7 +48,7 @@ textarea {
   }
   margin-bottom: 2%;
 }
-.thanks {
+/* .thanks {
   font-size: 18px;
   background-color: rgb(163, 226, 163);
   padding: 0.5% 1.5% 0.5% 0;
@@ -58,13 +57,13 @@ textarea {
   width: 30%;
   margin: 2%;
   text-align: center;
-}
+} */
 #output {
   margin: auto;
   width: 80%;
 }
 #api * {
   /* width: 80%; */
-  margin: 2% auto 2% auto;
+  margin-top: 1%;
   text-align: center;
 }

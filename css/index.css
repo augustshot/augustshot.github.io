@@ -14,6 +14,7 @@
   --bg-group: rgb(184, 171, 201);
   --table-border: rgb(100, 87, 117);
 }
+
 [data-theme="dark"] {
   --bg-main: rgb(57, 45, 78);
   --bg-light: #bfb1ca;
@@ -89,7 +90,7 @@ header {
     ;
   }
 }
-@media screen and (width>500px) and (width<1070px) {
+@media screen and (width>500px) and (width<1250px) {
   .nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,7 +116,6 @@ header {
     height: 0;
   }
   footer{ 
-    /* почему на гитхабе тут ниче не поменялось????!?!? */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -128,7 +128,7 @@ header {
     ;
   }
 }
-@media screen and (min-width: 1070px) {
+@media screen and (min-width: 1250px) {
   .nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

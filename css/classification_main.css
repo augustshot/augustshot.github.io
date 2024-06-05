@@ -18,7 +18,7 @@
     object-position: 50% 50%;
   }
 }
-@media screen and (width<1200px) and (width>=600px) {
+@media screen and (width<1250px) and (width>=600px) {
   .inner {
     display: grid;
     grid-template-columns: auto auto;
@@ -42,7 +42,7 @@
     object-position: 50% 50%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .inner {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -55,13 +55,19 @@
   }
   .group {
     width: 15%;
-    font-size: 26px;
+    font-size: 24px;
+    white-space: nowrap;
   }
   img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     object-position: 50% 50%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .group{
+    font-size: 26px;
   }
 }
 table,
@@ -101,4 +107,7 @@ tr {
 }
 .inner a * div {
   aspect-ratio: 16/9;
+}
+.group{
+  white-space: nowrap;
 }
