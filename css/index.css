@@ -89,6 +89,9 @@ header {
     "email"
     ;
   }
+  #go-to *{
+    font-size: 16px;
+  }
 }
 @media screen and (width>500px) and (width<1250px) {
   .nav {
@@ -110,6 +113,10 @@ header {
   #go-to {
     display: grid;
     grid-template-columns: 1fr;
+    *{
+      font-size: 16px;
+    }
+      
   }
   #divider {
     opacity: 0;
