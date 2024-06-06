@@ -29,6 +29,7 @@
 }
 textarea {
   width: 50%;
+  max-width: 95%;
 }
 button {
   background-color: var(--bg-light);
