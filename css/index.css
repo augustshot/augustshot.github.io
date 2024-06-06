@@ -320,6 +320,7 @@ footer {
     border-radius: 25px;
     padding: 2%;
     width: 80%;
+    white-space: nowrap;
   }
 }
 #go-to a:hover {
