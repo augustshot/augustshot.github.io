@@ -71,7 +71,7 @@ header {
   }
   #img-left img {
     width: 100%;
-    margin: auto;
+    margin: 2% auto 2% auto;
   }
   #divider {
     opacity: 0;
@@ -95,7 +95,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "main class" " collection info";
-    font-size: 30px;
+    font-size:22px;
   }
   header {
     font-size: 100px;
